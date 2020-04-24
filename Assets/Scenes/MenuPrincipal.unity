@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 1636084570}
   - component: {fileID: 1636084569}
   - component: {fileID: 1636084571}
+  - component: {fileID: 1636084572}
   m_Layer: 5
   m_Name: NuevaPartida
   m_TagString: Untagged
@@ -918,6 +919,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 1522907645}
   audioClick: {fileID: 8300000, guid: 0ac21dba0a0e71141af774ca762a4f11, type: 3}
+--- !u!114 &1636084572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636084567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb8243380bd30544929a2f8666e11a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1797406987
 GameObject:
   m_ObjectHideFlags: 0
