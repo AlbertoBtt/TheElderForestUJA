@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Curar
+  - Bateria
+  - Energia
+  - Objetivo
+  - Libro
+  - Jugador
   layers:
   - Default
   - TransparentFX
