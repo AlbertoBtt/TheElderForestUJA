@@ -15,7 +15,7 @@ public class Enemigo : MonoBehaviour
         {
             if (raycast.collider.gameObject.CompareTag("Player"))
             {
-                jugador.RecibirDaño(Mathf.Abs(Time.deltaTime * daño));
+            //    jugador.RecibirDaño(Mathf.Abs(Time.deltaTime * daño));
             }
             else
             {
