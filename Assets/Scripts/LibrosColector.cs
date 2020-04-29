@@ -7,12 +7,14 @@ public class LibrosColector : MonoBehaviour
 {
     public static int puntos = 0;
     public Text score;
+    public AudioClip sonidopagina = null;
 
     void OnTriggerEnter(Collider collision) 
     {
         if(collision.gameObject.tag == "Libro")
         {
             puntos += 1;
+            AudioSource.PlayClipAtPoint(sonidopagina, transform.position, 1.0f);
             Destroy(collision.gameObject);
         }
     }
