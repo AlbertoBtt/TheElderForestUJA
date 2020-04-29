@@ -9,28 +9,38 @@ public class Linterna : MonoBehaviour
     float bateria;
     public float bateriaMaxima;
     public GameObject luz;
-    public Text texto;
+    //public Text texto;
+    public Slider slider;
 
     private void Start()
     {
-        bateria = Mathf.Abs(bateriaMaxima);
+        //bateria = Mathf.Abs(bateriaMaxima);
+        slider.value = slider.maxValue;
+        luz.SetActive(false);
     }
 
     void Update()
     {
-        texto.text = "Bateria: " + bateria.ToString("0") + "%";
+        //slider.value = bateria;
+        //texto.text = "Bateria: " + bateria.ToString("0") + "%";
         if (luz.activeSelf)
-            bateria -= Time.deltaTime;
-        else if (!luz.activeSelf && bateria < Mathf.Abs(bateriaMaxima) && regenerarBateria)
-            bateria += Time.deltaTime;
+            slider.value -= 1;
+        //else if (!luz.activeSelf && bateria < Mathf.Abs(bateriaMaxima) && regenerarBateria)
+        //    bateria += Time.deltaTime;
 
-        if (bateria <= 0)
-            luz.SetActive(false);
+        //if (bateria <= 0)
+        //    luz.SetActive(false);
 
-        if(Input.GetKeyDown(KeyCode.F) && bateria > 0)
+        if(Input.GetKeyDown(KeyCode.F) && slider.value > slider.minValue)
         {
-            luz.SetActive(!luz.activeSelf);
-            GetComponent<AudioSource>().Play();
+            if (luz.activeSelf)
+            {
+                luz.SetActive(false);
+            }
+            else {
+                luz.SetActive(true);
+            }
+            //GetComponent<AudioSource>().Play();
         }
     }
 
