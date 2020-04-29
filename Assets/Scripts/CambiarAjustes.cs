@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CambiarAjustes : MonoBehaviour, IPointerClickHandler
 {
+    public AudioSource sonido;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -14,6 +15,8 @@ public class CambiarAjustes : MonoBehaviour, IPointerClickHandler
         }
         else
         {
+            PlayerPrefs.SetFloat("Volumen", sonido.volume);
+            PlayerPrefs.SetInt("Graficos", QualitySettings.GetQualityLevel());
             SceneManager.LoadScene(0);
         }
     }
