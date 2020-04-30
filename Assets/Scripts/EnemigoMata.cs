@@ -11,7 +11,7 @@ public class EnemigoMata : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemigo")
         {
-            AudioSource.PlayClipAtPoint(muerte, transform.position, 1.0f);
+            AudioSource.PlayClipAtPoint(muerte, transform.position, PlayerPrefs.GetFloat("Volumen"));
             Time.timeScale = 0; 
         }
     }

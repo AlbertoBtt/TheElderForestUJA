@@ -13,6 +13,7 @@ public class Linterna : MonoBehaviour
     //public Text texto;
     public Slider slider;
     public AudioClip Sonido = null;
+    public AudioSource audiosonido;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class Linterna : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && slider.value > slider.minValue)
         {
-            AudioSource.PlayClipAtPoint(Sonido, jugador.transform.position, 1.0f);
+            audiosonido.PlayOneShot(Sonido, PlayerPrefs.GetFloat("Volumen"));
             if (luz.activeSelf)
             {
                 luz.SetActive(false);

@@ -9,6 +9,7 @@ public class LibrosColector : MonoBehaviour
     public Text score;
     public AudioClip sonidopagina = null;
     public Text notificacion;
+    public AudioSource audiosonido;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class LibrosColector : MonoBehaviour
         if(collision.gameObject.tag == "Libro")
         {
             puntos += 1;
-            AudioSource.PlayClipAtPoint(sonidopagina, transform.position, 1.0f);
+            audiosonido.PlayOneShot(sonidopagina, PlayerPrefs.GetFloat("Volumen"));
             StartCoroutine(mostrar_texto());
             Destroy(collision.gameObject);
             

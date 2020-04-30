@@ -17,6 +17,7 @@ public class CambiarAjustes : MonoBehaviour, IPointerClickHandler
         {
             PlayerPrefs.SetFloat("Volumen", sonido.volume);
             PlayerPrefs.SetInt("Graficos", QualitySettings.GetQualityLevel());
+            PlayerPrefs.Save();
             SceneManager.LoadScene(0);
         }
     }
