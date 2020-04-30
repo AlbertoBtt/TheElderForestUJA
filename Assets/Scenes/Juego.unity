@@ -783,7 +783,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1, y: 9, z: 10, w: -10}
+  m_BoundingSphereOverride: {x: 0, y: 1.1676e-41, z: 0, w: 5.857146e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2445,6 +2445,27 @@ MonoBehaviour:
   bateriaMaxima: 100000
   luz: {fileID: 263552317}
   slider: {fileID: 1802773030}
+--- !u!20 &1394385620 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 130577602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1394385621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394385615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14047d05b157844bac4e3c1e154fbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1394385620}
+  luz: {fileID: 263552317}
+  Enemigos: {fileID: 2080920399}
 --- !u!1001 &1417215545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3292,6 +3313,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1922948311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922948308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd8607e854e6a4468d15d468cbdf9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muerte: {fileID: 8300000, guid: d3a26c135d1ecbe4c9516a36da1e345f, type: 3}
 --- !u!114 &1922948315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3621,7 +3655,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d9699e7ed8a86a64585cdb2d9f9ba4de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d9699e7ed8a86a64585cdb2d9f9ba4de,
         type: 3}
@@ -3696,7 +3730,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d9699e7ed8a86a64585cdb2d9f9ba4de,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9699e7ed8a86a64585cdb2d9f9ba4de, type: 3}
@@ -3720,7 +3754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   objetivo: {fileID: 1185976540}
-  velocidad: 0.3
+  velocidad: 0.5
   distancia: 200
   "da\xF1o": 0
 --- !u!114 &2080920401
@@ -3755,7 +3789,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 2.8385854
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3831,6 +3865,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &2080920403
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080920399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 4.385315
+  m_Height: 18.244717
+  m_Direction: 1
+  m_Center: {x: 0.8351901, y: 7.6756325, z: 0.77005}
 --- !u!1001 &5677219888177710981
 PrefabInstance:
   m_ObjectHideFlags: 0

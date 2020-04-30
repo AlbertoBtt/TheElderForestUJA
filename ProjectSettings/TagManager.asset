@@ -10,6 +10,7 @@ TagManager:
   - Objetivo
   - Libro
   - Jugador
+  - Enemigo
   layers:
   - Default
   - TransparentFX
