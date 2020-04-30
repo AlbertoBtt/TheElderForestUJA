@@ -9,8 +9,10 @@ public class Linterna : MonoBehaviour
     float bateria;
     public float bateriaMaxima;
     public GameObject luz;
+    public GameObject jugador;
     //public Text texto;
     public Slider slider;
+    public AudioClip Sonido = null;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class Linterna : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && slider.value > slider.minValue)
         {
+            AudioSource.PlayClipAtPoint(Sonido, jugador.transform.position, 1.0f);
             if (luz.activeSelf)
             {
                 luz.SetActive(false);
