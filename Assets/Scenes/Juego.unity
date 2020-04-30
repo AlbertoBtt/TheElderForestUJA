@@ -783,7 +783,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1, y: 9, z: 10, w: -10}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2444,7 +2444,9 @@ MonoBehaviour:
   regenerarBateria: 0
   bateriaMaxima: 100000
   luz: {fileID: 263552317}
+  jugador: {fileID: 1922948308}
   slider: {fileID: 1802773030}
+  Sonido: {fileID: 8300000, guid: 14222b2198c5e4d448099a3c7d9678dd, type: 3}
 --- !u!1001 &1417215545
 PrefabInstance:
   m_ObjectHideFlags: 0
