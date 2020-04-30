@@ -18,10 +18,11 @@ public class Tiempo_Camara : MonoBehaviour
     {
         //Tiempo.text = "" + (int)Time.timeSinceLevelLoad;
         gametimer += Time.deltaTime;
+        //gametimer = (int)Time.timeSinceLevelLoad;
 
         int segundo = (int)(gametimer % 60);
-        int minuto = (int)(gametimer / 60) & 60;
-        int hora = (int)(gametimer / 3600) % 24;
+        int minuto = (int)(gametimer / 60);
+        int hora = (int)(gametimer / 3600);
 
         string timerstring = string.Format("{0:0}:{1:00}:{2:00}", hora, minuto, segundo);
 
