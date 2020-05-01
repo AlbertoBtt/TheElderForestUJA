@@ -16,16 +16,18 @@ public class EnemigoArea : MonoBehaviour
     {
         if (Vector3.Distance(player.position, transform.position) <= range)
         {
-            
-            for(int i = 0; i < audiosonido.Length; i++)
+
+            for (int i = 0; i < audiosonido.Length; i++)
             {
                 audiosonido[i].mute = true;
             }
-            if (primeravez) {
-                enemigo.PlayOneShot(audioclip, PlayerPrefs.GetFloat("Volumen"));
+            if (primeravez)
+            {
+                enemigo.Play();
+
                 primeravez = false;
             }
-                fps.GetComponent<AudioSource>().mute = true;
+            fps.GetComponent<AudioSource>().mute = true;
         }
         else
         {
@@ -33,10 +35,8 @@ public class EnemigoArea : MonoBehaviour
             {
                 audiosonido[i].mute = false;
             }
-            if (!primeravez)
-            {
-                primeravez = true;
-            }
+            primeravez = true;
+            enemigo.Stop();
             fps.GetComponent<AudioSource>().mute = false;
         }
     }

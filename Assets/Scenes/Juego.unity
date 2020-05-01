@@ -783,7 +783,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.949e-42, z: 0, w: 251658240}
+  m_BoundingSphereOverride: {x: 0, y: 1.1636e-41, z: 0, w: -1}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2405,6 +2405,7 @@ MonoBehaviour:
   - {fileID: 1427033742}
   - {fileID: 1427033742}
   - {fileID: 1427033742}
+  - {fileID: 2023364400}
 --- !u!4 &1294606383
 Transform:
   m_ObjectHideFlags: 0
@@ -3512,7 +3513,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b978dc6d17f701047851b76d19e54b22, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3525,7 +3526,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3558,7 +3559,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
