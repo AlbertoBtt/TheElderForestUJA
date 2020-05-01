@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LibrosColector : MonoBehaviour
 {
@@ -40,6 +41,15 @@ public class LibrosColector : MonoBehaviour
     void Update()
     {
         score.text = "Libros: " + puntos + " de 10";
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            puntos = 10;
+        }
+        if (puntos == 10)
+        {
+            puntos = 0;
+            SceneManager.LoadScene(4);
+        }
     }
 
 }

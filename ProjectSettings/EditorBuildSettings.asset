@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juego.unity
     guid: f3e1ae435eb05714b9754c0072209837
+  - enabled: 1
+    path: Assets/Scenes/GameOVer.unity
+    guid: 461d9069fb7df1c4b91f777f149a2934
+  - enabled: 1
+    path: Assets/Scenes/Ganar.unity
+    guid: 2ff950592c5cf834f9db9ca708dac28a
   m_configObjects: {}
