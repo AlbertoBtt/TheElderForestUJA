@@ -27,7 +27,7 @@ public class Linterna : MonoBehaviour
         //slider.value = bateria;
         //texto.text = "Bateria: " + bateria.ToString("0") + "%";
         if (luz.activeSelf)
-            slider.value -= 1;
+            slider.value -= 1.5f;
         //else if (!luz.activeSelf && bateria < Mathf.Abs(bateriaMaxima) && regenerarBateria)
         //    bateria += Time.deltaTime;
 
