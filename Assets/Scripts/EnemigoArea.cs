@@ -7,23 +7,35 @@ public class EnemigoArea : MonoBehaviour
     public float range=10F;
     public Transform player;
     public AudioSource[] audiosonido;
+    public AudioSource enemigo;
     public GameObject fps;
+    private bool primeravez;
+    public AudioClip audioclip;
 
     void Update()
     {
         if (Vector3.Distance(player.position, transform.position) <= range)
         {
+            
             for(int i = 0; i < audiosonido.Length; i++)
             {
                 audiosonido[i].mute = true;
             }
-            fps.GetComponent<AudioSource>().mute = true;
+            if (primeravez) {
+                enemigo.PlayOneShot(audioclip, PlayerPrefs.GetFloat("Volumen"));
+                primeravez = false;
+            }
+                fps.GetComponent<AudioSource>().mute = true;
         }
         else
         {
             for (int i = 0; i < audiosonido.Length; i++)
             {
                 audiosonido[i].mute = false;
+            }
+            if (!primeravez)
+            {
+                primeravez = true;
             }
             fps.GetComponent<AudioSource>().mute = false;
         }
