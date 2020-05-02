@@ -14,6 +14,7 @@ public class Linterna : MonoBehaviour
     public Slider slider;
     public AudioClip Sonido = null;
     public AudioSource audiosonido;
+    bool aux = true;
 
     private void Start()
     {
@@ -45,6 +46,14 @@ public class Linterna : MonoBehaviour
                 luz.SetActive(true);
             }
             //GetComponent<AudioSource>().Play();
+        }
+
+        if (slider.value <= slider.minValue && aux) {
+            aux = false;
+            audiosonido.PlayOneShot(Sonido, PlayerPrefs.GetFloat("Volumen"));
+            luz.SetActive(false);
+            Color color = new Color(1, 0, 0);
+            slider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = color;
         }
     }
 
