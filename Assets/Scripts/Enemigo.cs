@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    public Jugador jugador;
     public Transform objetivo;
     public float velocidad, distancia, daño;
 
@@ -15,7 +14,6 @@ public class Enemigo : MonoBehaviour
         {
             if (raycast.collider.gameObject.CompareTag("Player"))
             {
-            //    jugador.RecibirDaño(Mathf.Abs(Time.deltaTime * daño));
             }
             else
             {
