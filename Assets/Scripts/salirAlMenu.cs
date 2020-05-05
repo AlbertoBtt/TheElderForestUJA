@@ -14,8 +14,13 @@ public class salirAlMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menu.gameObject.SetActive(false);
         activado = false;
+        menu.gameObject.SetActive(false);
+        UI.gameObject.SetActive(true);
+        Time.timeScale = 1;
+        camara.GetComponent<FirstPersonController>().libre = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update()
     {
