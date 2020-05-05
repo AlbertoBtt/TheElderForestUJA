@@ -34,9 +34,6 @@ public class graficosInicial : MonoBehaviour
             case 5:
                 frase = "Muy Altos";
                 break;
-            case 6:
-                frase = "Ultra";
-                break;
         }
         return frase;
     }

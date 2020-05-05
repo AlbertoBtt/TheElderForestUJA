@@ -42,9 +42,6 @@ public class bajarGraficos : MonoBehaviour, IPointerClickHandler
             case 5:
                 frase = "Muy Altos";
                 break;
-            case 6:
-                frase = "Ultra";
-                break;
         }
         return frase;
     }

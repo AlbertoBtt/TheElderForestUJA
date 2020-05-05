@@ -11,7 +11,7 @@ public class graficosSubir : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         int calidad = QualitySettings.GetQualityLevel();
-        if (calidad != 6)
+        if (calidad != 5)
         {
             calidad++;
             texto.text = getCalidad(calidad);
@@ -41,9 +41,6 @@ public class graficosSubir : MonoBehaviour, IPointerClickHandler
                 break;
             case 5:
                 frase = "Muy Altos";
-                break;
-            case 6:
-                frase = "Ultra";
                 break;
         }
         return frase;
